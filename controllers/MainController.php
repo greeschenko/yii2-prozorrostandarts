@@ -2,7 +2,6 @@
 
 namespace greeschenko\prozorrostandarts\controllers;
 
-use Yii;
 use yii\web\Controller;
 use greeschenko\prozorrostandarts\models\Standarts;
 
@@ -10,6 +9,8 @@ class MainController extends Controller
 {
     public function actionSync()
     {
+        set_time_limit(6000);
+
         $model = Standarts::deleteAll();
 
         foreach ($this->module->types as $type => $url) {
@@ -23,7 +24,7 @@ class MainController extends Controller
                         $value = $value['name_uk'];
                     }
                     $model = new Standarts();
-                    $model->key = $key;
+                    $model->key = (string) $key;
                     $model->value = $key.' - '.$value;
                     $model->type = $type;
                     if (!$model->save()) {
@@ -32,7 +33,6 @@ class MainController extends Controller
                 }
             }
         }
-
 
         return true;
     }

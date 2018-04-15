@@ -11,6 +11,8 @@ class Module extends \yii\base\Module
         'CVA' => 'http://standards.openprocurement.org/classifiers/cav/uk.json',
         'CAV-PS' => 'http://standards.openprocurement.org/classifiers/cav_v2/uk.json',
         'CPV' => 'http://standards.openprocurement.org/classifiers/cpv/uk.json',
+        'DK021' => 'https://raw.githubusercontent.com/openprocurement/standards/master/classifiers/dk021/uk.json',
+        'DKPP' => 'https://raw.githubusercontent.com/openprocurement/standards/master/classifiers/dkpp/uk.json',
     ];
 
     public function init()
