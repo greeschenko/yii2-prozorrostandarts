@@ -2,8 +2,6 @@
 
 namespace greeschenko\prozorrostandarts\models;
 
-use yii\helpers\ArrayHelper;
-
 /**
  * This is the model class for table "{{%standarts}}".
  *
@@ -29,7 +27,8 @@ class Standarts extends \yii\db\ActiveRecord
     {
         return [
             [['key', 'value', 'type'], 'required'],
-            [['key', 'type'], 'string', 'max' => 32],
+            [['key'], 'string', 'max' => 255],
+            [['type'], 'string', 'max' => 32],
             [['value'], 'string'],
         ];
     }
