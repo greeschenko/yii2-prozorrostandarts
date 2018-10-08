@@ -15,6 +15,7 @@ class Module extends \yii\base\Module
         'DKPP' => 'https://raw.githubusercontent.com/openprocurement/standards/master/classifiers/dkpp/uk.json',
         'INN' => 'https://raw.githubusercontent.com/openprocurement/standards/master/classifiers/inn/en_pretty.json',
         'ATC' => 'https://raw.githubusercontent.com/openprocurement/standards/master/classifiers/atc/en_pretty.json',
+        'KVTSPZ' => 'https://raw.githubusercontent.com/openprocurement/standards/master/classifiers/kvtspz/uk_pretty.json',
     ];
 
     public function init()
